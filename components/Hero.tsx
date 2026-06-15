@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-10 md:px-8 min-h-[calc(100vh-80px)] flex items-center pt-16">
 
-        <div className="max-w-[500px]">
+        <div className="max-w-[800px]">
 
           <motion.h1
   // initial={{ opacity: 0, y: 50 }}
@@ -27,16 +27,15 @@ export default function Hero() {
     text-white
     font-bold
     
-    max-w-[500px]
+    max-w-[800px]
     text-[28px]
     md:text-[42px]
     lg:text-[52px]
 
     hero-h1
   "
-
 >
-  Empowering Builders. Connecting Innovators.
+Empowering Builders. Connecting Innovators.
 </motion.h1>
           <p className="mt-8 text-gray-200 text-sm md:text-base max-w-2xl leading-relaxed">
             Empowering businesses and communities through

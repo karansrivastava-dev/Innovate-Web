@@ -25,6 +25,7 @@ export default function UpcomingEvents() {
               Upcoming Events
             </h2>
           </div>
+          
 
           <button className="flex items-center gap-2 text-[#12284d] font-medium">
             See All Events

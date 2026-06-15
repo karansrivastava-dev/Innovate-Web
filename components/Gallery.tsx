@@ -1,74 +1,116 @@
 import Image from "next/image";
 
-const galleryImages = [
-  { src: "/images/gallery/g1.jpg", className: "col-span-2 row-span-2" },
-  { src: "/images/gallery/g2.jpg", className: "col-span-2 row-span-1" },
-  { src: "/images/gallery/g3.jpg", className: "col-span-1 row-span-1" },
-  { src: "/images/gallery/g4.jpg", className: "col-span-1 row-span-1" },
-  { src: "/images/gallery/g5.jpg", className: "col-span-1 row-span-1" },
-  { src: "/images/gallery/g6.jpg", className: "col-span-2 row-span-1" },
-  { src: "/images/gallery/g7.jpg", className: "col-span-2 row-span-1" },
-  { src: "/images/gallery/g8.jpg", className: "col-span-2 row-span-1" },
-];
-
 export default function Gallery() {
   return (
-    <section className="bg-[#f7f9fc] py-24">
-
-      <div className="max-w-[1728px] mx-auto px-10">
+    <section className="py-24 bg-white">
+      <div className="max-w-[1450px] mx-auto px-6">
 
         {/* Heading */}
-
         <div className="text-center mb-14">
-
-          <span className="inline-block px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 text-sm font-medium">
-            Gallery
-          </span>
-
-          <h2 className="text-[52px] font-bold text-[#12284d] mt-5">
-            Moments that matter
+          <h2 className="text-[52px] font-bold text-[#12284d]">
+            Moments that Matter
           </h2>
 
-          <p className="text-slate-500 mt-4 max-w-2xl mx-auto">
+          <p className="text-slate-500 mt-4 max-w-3xl mx-auto">
             Real people. Real events. Real connections.
-            Every photo tells a story of a community
-            that shows up for each other.
+            Every photo tells a story of a community that
+            shows up for each other.
           </p>
-
         </div>
 
-        {/* Gallery Grid */}
+        {/* Bento Grid */}
+        <div className="grid grid-cols-12 gap-2 auto-rows-[150px]">
 
-        <div className="grid grid-cols-6 gap-3 auto-rows-[180px]">
+          {/* Left Large */}
+          <div className="col-span-5 row-span-3 overflow-hidden rounded-xl">
+            <Image
+              src="/images/gallery/g1.jpg"
+              alt="Gallery"
+              width={1000}
+              height={1200}
+              className="w-full h-full object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
 
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className={`
-                relative
-                overflow-hidden
-                rounded-xl
-                ${image.className}
-              `}
-            >
-              <Image
-                src={image.src}
-                alt={`Gallery ${index + 1}`}
-                fill
-                className="
-                  object-cover
-                  hover:scale-105
-                  transition
-                  duration-500
-                "
-              />
-            </div>
-          ))}
+          {/* Center Top */}
+          <div className="col-span-5 row-span-2 overflow-hidden rounded-xl">
+            <Image
+              src="/images/gallery/g2.jpg"
+              alt="Gallery"
+              width={1000}
+              height={700}
+              className="w-full h-full object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          {/* Right Top */}
+          <div className="col-span-2 row-span-1 overflow-hidden rounded-xl">
+            <Image
+              src="/images/gallery/g3.jpg"
+              alt="Gallery"
+              width={500}
+              height={500}
+              className="w-full h-full object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          {/* Right Middle */}
+          <div className="col-span-2 row-span-1 overflow-hidden rounded-xl">
+            <Image
+              src="/images/gallery/g4.jpg"
+              alt="Gallery"
+              width={500}
+              height={500}
+              className="w-full h-full object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          {/* Center Bottom Left */}
+          <div className="col-span-5 row-span-1 overflow-hidden rounded-xl">
+            <Image
+              src="/images/gallery/g5.jpg"
+              alt="Gallery"
+              width={700}
+              height={500}
+              className="w-full h-full object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          {/* Center Bottom Right */}
+          <div className="col-span-2 row-span-1 overflow-hidden rounded-xl">
+            <Image
+              src="/images/gallery/g6.jpg"
+              alt="Gallery"
+              width={500}
+              height={500}
+              className="w-full h-full object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          {/* Bottom Left */}
+          <div className="col-span-6 row-span-2 overflow-hidden rounded-xl">
+            <Image
+              src="/images/gallery/g7.jpg"
+              alt="Gallery"
+              width={1200}
+              height={800}
+              className="w-full h-full object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          {/* Bottom Right */}
+          <div className="col-span-6 row-span-2 overflow-hidden rounded-xl">
+            <Image
+              src="/images/gallery/g8.jpg"
+              alt="Gallery"
+              width={1200}
+              height={800}
+              className="w-full h-full object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
 
         </div>
-
       </div>
-
     </section>
   );
 }

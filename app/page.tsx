@@ -6,6 +6,9 @@ import LogoStrip from "@/components/LogoStrip";
 import Experience from "@/components/Experience";
 import UpcomingEvents from "@/components/UpcomingEvents";
 import Gallery from "@/components/Gallery";
+import Stats from "@/components/Stats";
+import CTA from "@/components/CTA";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -19,6 +22,9 @@ export default function Home() {
       <Experience />
       <UpcomingEvents />
       <Gallery />
+      <Stats />
+      <CTA />
+      <FAQ />
       <Footer />
     </>
   );

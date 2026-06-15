@@ -20,24 +20,23 @@ export default function Hero() {
         <div className="max-w-[500px]">
 
           <motion.h1
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
+  // initial={{ opacity: 0, y: 50 }}
+  // animate={{ opacity: 1, y: 0 }}
+  // transition={{ duration: 0.8 }}
   className="
     text-white
     font-bold
-    leading-[1.15]
+    
     max-w-[500px]
     text-[28px]
     md:text-[42px]
     lg:text-[52px]
+
+    hero-h1
   "
+
 >
-  Connecting People.
-  <br />
-  Creating Opportunities.
-  <br />
-  Building Communities.
+  Empowering Builders. Connecting Innovators.
 </motion.h1>
           <p className="mt-8 text-gray-200 text-sm md:text-base max-w-2xl leading-relaxed">
             Empowering businesses and communities through

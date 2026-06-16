@@ -1,62 +1,64 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-cover bg-center pt-[80px]"
-      style={{
-        backgroundImage: "url('/images/hero.jpg')",
-      }}
+      className="relative min-h-screen pt-[80px] overflow-hidden"
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0b1736]/80 via-black/40 to-transparent"></div>
+      {/* Background Image - optimized to prevent blur and stretching */}
+      <Image
+        src="/images/hero.jpg"
+        alt="Hero Background"
+        fill
+        priority
+        quality={100}
+        unoptimized
+        className="object-cover object-center pointer-events-none -z-20"
+      />
+
+      {/* Overlay - lightened slightly to keep image visible and clear */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/80 via-[#0b1736]/40 to-transparent pointer-events-none -z-10"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-10 md:px-8 min-h-[calc(100vh-80px)] flex items-center pt-16">
-
         <div className="max-w-[800px]">
-
-          <motion.h1
-  // initial={{ opacity: 0, y: 50 }}
-  // animate={{ opacity: 1, y: 0 }}
-  // transition={{ duration: 0.8 }}
-  className="
-    text-white
-    font-bold
-    
-    max-w-[800px]
-    text-[28px]
-    md:text-[42px]
-    lg:text-[52px]
-
-    hero-h1
-  "
->
-Empowering Builders. Connecting Innovators.
-</motion.h1>
-          <p className="mt-8 text-gray-200 text-sm md:text-base max-w-2xl leading-relaxed">
+          <h1
+            className="
+              text-white
+              font-bold
+              max-w-[800px]
+              text-[32px]
+              md:text-[48px]
+              lg:text-[64px]
+              leading-tight
+              tracking-tight
+              hero-h1
+            "
+          >
+            Empowering Builders. Connecting Innovators.
+          </h1>
+          <p
+            className="mt-8 text-slate-200 text-lg md:text-xl max-w-2xl leading-relaxed font-medium drop-shadow-md"
+          >
             Empowering businesses and communities through
-            innovation, collaboration and meaningful
+            innovation, collaboration, and meaningful
             digital experiences.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-
-            <button className="bg-cyan-500 hover:bg-cyan-600 transition px-6 py-3 rounded-xl text-white font-medium">
+          <div
+            className="mt-10 flex flex-wrap gap-4"
+          >
+            <button className="bg-white hover:bg-[#f8fafc] text-[#0b1736] border-2 border-white px-8 py-4 rounded-full text-base font-semibold shadow-lg shadow-black/10 transition-all hover:shadow-black/20 hover:-translate-y-[1px]">
               Join Community
             </button>
-
-            <button className="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-xl text-white font-medium">
+            <button className="border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all px-8 py-4 rounded-full text-white font-semibold backdrop-blur-sm hover:-translate-y-[1px]">
               Explore Events
             </button>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

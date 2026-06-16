@@ -1,138 +1,72 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function CTA() {
   return (
     <section className="py-24 bg-[#f8fafc]">
       <div className="max-w-[1588px] mx-auto px-6">
-
-        <div className="relative h-[600px] overflow-hidden rounded-[32px] shadow-2xl">
-
+        <div
+          className="relative h-[600px] overflow-hidden rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] group"
+        >
           {/* Background Image */}
-          <Image
-            src="/images/community.jpg"
-            alt="Join Community"
-            fill
-            priority
-            className="object-cover"
-          />
+          <div className="absolute inset-0 transition-transform duration-1000 group-hover:scale-105">
+            <Image
+              src="/images/community.jpg"
+              alt="Join Community"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/90 via-[#0b1736]/60 to-transparent pointer-events-none" />
 
           {/* Content */}
           <div className="absolute inset-0 flex items-center z-10">
-
             <div
-              className="
-                ml-8
-                md:ml-16
-                lg:ml-20
-
-                max-w-[520px]
-
-                bg-white/10
-                backdrop-blur-xl
-
-                border
-                border-white/20
-
-                rounded-[28px]
-
-                p-8
-                md:p-10
-
-                shadow-2xl
-              "
+              className="ml-8 md:ml-16 lg:ml-20 max-w-[560px] bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2rem] p-10 md:p-12 shadow-2xl relative overflow-hidden"
             >
-
-              {/* Badge */}
-              <span
-                className="
-                  inline-flex
-                  items-center
-
-                  px-4
-                  py-2
-
-                  rounded-full
-
-                  bg-white/10
-                  border
-                  border-white/20
-
-                  text-white
-                  text-sm
-                "
-              >
-                🚀 Join Innovate Web
-              </span>
-
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+              
               {/* Heading */}
               <h2
-                className="
-                  mt-6
-
-                  text-white
-
-                  text-[48px]
-                  md:text-[64px]
-
-                  font-bold
-                  leading-[1.05]
-                "
+                className="mt-6 text-white text-[48px] md:text-[60px] font-bold leading-[1.1] tracking-tight"
               >
                 Join Our
                 <br />
-                Community
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Community</span>
               </h2>
 
               {/* Description */}
               <p
-                className="
-                  mt-6
-
-                  text-white/80
-
-                  text-base
-                  md:text-lg
-
-                  leading-8
-                "
+                className="mt-6 text-slate-300 text-lg leading-relaxed"
               >
                 Connect with developers, founders, students and innovators.
                 Learn, collaborate and grow together through networking,
                 workshops, meetups and meaningful opportunities.
               </p>
 
-              {/* Button */}
-              <button
-                className="
-                  mt-8
-
-                  px-8
-                  py-4
-
-                  rounded-xl
-
-                  bg-[#001f63]
-                  hover:bg-[#0a2f8a]
-
-                  text-white
-                  font-semibold
-
-                  transition-all
-                  duration-300
-                "
-              >
-                Join The Community
-              </button>
-
+              {/* Buttons */}
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <button
+                  className="px-10 py-4 rounded-full bg-white hover:bg-[#f8fafc] text-[#0b1736] font-bold text-lg transition-all shadow-lg shadow-black/10 hover:shadow-black/20 hover:-translate-y-[1px]"
+                >
+                  Join The Community
+                </button>
+                <Link
+                  href="/contact"
+                  className="px-10 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-lg transition-all shadow-lg shadow-black/10 hover:shadow-black/20 hover:-translate-y-[1px] backdrop-blur-md"
+                >
+                  Contact Us
+                </Link>
+              </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

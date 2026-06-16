@@ -2,106 +2,49 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#000B2A] text-white">
-      <div className="max-w-[1400px] mx-auto px-8 py-16">
+    <footer className="bg-[#020817] text-white border-t border-white/10 relative overflow-hidden py-16">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+      <div className="absolute -top-[220px] left-1/2 -translate-x-1/2 w-[850px] h-[420px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-10">
-
-          {/* Logo Section */}
-          <div className="md:col-span-2">
-
-            <div className="bg-white inline-block p-3 rounded-lg">
-              <Image
-                src="/images/logo.png"
-                alt="Innovate Web"
-                width={180}
-                height={50}
-              />
-            </div>
-
-            <div className="flex gap-5 mt-6 text-white/70 text-sm">
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
-              <a href="#">X</a>
-            </div>
-
-            <p className="mt-6 text-white/50 text-sm max-w-xs">
-              Connecting People, Creating Opportunities,
-              Building Communities.
-            </p>
-
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold mb-5">
-              Company
-            </h4>
-
-            <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="font-semibold mb-5">
-              Support
-            </h4>
-
-            <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-            </ul>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h4 className="font-semibold mb-5">
-              Social
-            </h4>
-
-            <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Twitter</a></li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold mb-5">
-              Legal
-            </h4>
-
-            <ul className="space-y-3 text-white/60 text-sm">
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Cookie Policy</a></li>
-              <li><a href="#">Disclaimer</a></li>
-            </ul>
-          </div>
-
+      <div className="max-w-[1400px] mx-auto px-10 relative z-10 flex flex-col items-center text-center gap-10">
+        <div className="bg-white/5 backdrop-blur-md border border-white/8 inline-flex items-center p-4 rounded-2xl">
+          <Image
+            src="/images/logo.png"
+            alt="Innovate Web"
+            width={140}
+            height={40}
+            className="object-contain brightness-0 invert"
+          />
         </div>
 
-        <div className="border-t border-white/10 mt-14 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <p className="max-w-md text-slate-300 text-sm leading-7">
+          A minimal hub for builders, creators, and founders. Explore events, connect with peers, and bring your ideas to life in one calm, focused community.
+        </p>
 
-          <p className="text-white/40 text-sm">
-            © 2026 Innovate Web. All rights reserved.
-          </p>
-
-          <p className="text-white/40 text-sm mt-3 md:mt-0">
-            Made with ❤️ for the Innovate Web Community
-          </p>
-
+        <div className="flex items-center gap-4">
+          <a href="#" aria-label="Twitter" className="w-10 h-10 rounded-full bg-white/5 border border-white/8 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:bg-cyan-400/10 transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/5 border border-white/8 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:bg-cyan-400/10 transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub" className="w-10 h-10 rounded-full bg-white/5 border border-white/8 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:bg-cyan-400/10 transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
         </div>
 
+        <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+          <a href="#home" className="hover:text-cyan-400 transition">Home</a>
+          <a href="#about" className="hover:text-cyan-400 transition">About</a>
+          <a href="#gallery" className="hover:text-cyan-400 transition">Gallery</a>
+          <a href="#events" className="hover:text-cyan-400 transition">Events</a>
+        </div>
+
+        <div className="w-full border-t border-white/10" />
+
+        <p className="text-slate-500 text-xs tracking-[0.08em] uppercase">
+          © {new Date().getFullYear()} Innovate Web — a minimal community for builders, creators, and founders.
+        </p>
       </div>
     </footer>
   );

@@ -1,3 +1,4 @@
+
 [
   {
     "slug": "founders-fireside-building-in-2027",
@@ -27,23 +28,26 @@
     "tags": ["Startup Grind", "In-Person", "Networking"]
   },
   {
-    "slug": "ai-workshop-tensorflow-pytorch",
-    "title": "AI Workshop: TensorFlow & PyTorch",
-    "date": "2027-01-10",
-    "time": "4:00PM - 7:00PM",
-    "location": "Innovate Lab, San Francisco, CA",
+    "slug": "innovate-web-lucknow-meetup-april-2025",
+    "title": "Innovate Web Lucknow Meetup | April 2025",
+    "date": "2025-04-27",
+    "time": "03:0PM - 6:00PM",
+    "location": "Summit Space- Coworking Office Space",
     "status": "completed",
     "category": "Workshop",
     "format": "In-Person",
-    "capacity": 120,
+    "capacity": 100,
     "remaining": 0,
-    "description": "Hands-on workshop focused on building production AI models with TensorFlow and PyTorch.",
-    "about": "From model design to deployment, this workshop gave builders the practical tools needed to launch machine learning projects faster.",
+    "description": "Building Fortresses: Practical Website Security for Modern Developers",
+    "about": "Dive deep into the latest in web development and digital marketing—right in the heart of the City of Nawabs!",
     "agenda": [
-      { "time": "4:00 PM", "title": "Check-in & Setup", "category": "Session" },
-      { "time": "4:30 PM", "title": "TensorFlow Fundamentals", "category": "Workshop" },
-      { "time": "5:30 PM", "title": "PyTorch Lab", "category": "Workshop" },
-      { "time": "6:30 PM", "title": "Project Demos", "category": "Demo" }
+      { "time": "3:00 PM", "title": "Welcome & Registration", "category": "Registration" },
+      { "time": "3:15 PM", "title": "Lightning Talks", "category": "Talk" },
+      { "time": "3:30 PM", "title": "Building Fortresses: Practical Website Security for Modern Developers", "category": "Session" },
+      { "time": "4:30 PM", "title": "Networking Break", "category": "Break" },
+      { "time": "4:45 PM", "title": "Beyond the Grid: Crafting Visual Chaos with Intelligence and Imagination", "category": "Session" },
+      { "time": "5:15 PM", "title": "From Chaos to Clarity: Website Design Simplified", "category": "Session" },
+      { "time": "5:45 PM", "title": "Q&A and Closing Remarks", "category": "Closing Remarks" }
     ],
     "speakers": [
       { "name": "Mina Park", "role": "AI Lead", "bio": "Built enterprise ML pipelines." },
